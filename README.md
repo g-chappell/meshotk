@@ -7,18 +7,10 @@ Start a new project on Next.js. This starter template consists of a connect wall
 Start project locally using CLI:
 
 ```bash
-npx create-mesh-app starter-next-ts-template
+npx meshjs app-name
 ```
 
-Start your project on [Demeter](https://demeter.run/):
-
-[![Code in Cardano Workspace](https://demeter.run/code/badge.svg)](https://demeter.run/code?repository=https://github.com/MeshJS/starter-next-ts-template.git&template=typescript)
-
 ## Learn More
-
-### [React components and hooks](https://meshjs.dev/react)
-
-Frontend components for wallet connections, and useful React hooks to getting wallet states - Mesh provides everything you need to bring your Web3 user interface to life.
 
 ### [APIs](https://meshjs.dev/apis)
 
@@ -28,8 +20,18 @@ From wallet integrations to transaction builders, Mesh makes Web3 development ea
 
 Whether you are new to web development or a seasoned blockchain full-stack developer, these guides will help you get started.
 
+### [Smart Contracts](https://meshjs.dev/smart-contracts)
+
+Open-source smart contracts, complete with documentation, live demos, and end-to-end source code.
+
+### [React components and hooks](https://meshjs.dev/react)
+
+Frontend components for wallet connections, and useful React hooks to getting wallet states - Mesh provides everything you need to bring your Web3 user interface to life.
+
 ## Connect with us
 
-Follow us on [Twitter](https://twitter.com/meshsdk) for updates.
+Give a star on our [GitHub](https://meshjs.dev/go/github) to stay up to date with our latest developments.
 
-Join our [Discord](https://discord.gg/Z6AH9dahdH) for any questions and suggestions.
+Follow us on [Twitter](https://meshjs.dev/go/twitter) for updates.
+
+Join our [Discord](https://meshjs.dev/go/discord) for any questions and suggestions.

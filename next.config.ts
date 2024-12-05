@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   webpack: function (config, options) {
     config.experiments = {
@@ -8,7 +9,6 @@ const nextConfig = {
     };
     return config;
   },
-  pageExtensions: ["js", "jsx", "ts", "tsx"],
 };
 
 export default nextConfig;
