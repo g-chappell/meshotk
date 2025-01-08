@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .nav-button {
+        @apply w-full text-left px-4 py-2 rounded-lg text-gray-300 hover:text-white hover:bg-red-900/50 transition-colors border border-transparent hover:border-red-800;
+    }
+}
