@@ -6,6 +6,36 @@ export default function Home() {
     const [isLoading, setIsLoading] = useState(false);
     const [selectedTab, setSelectedTab] = useState("dashboard");
 
+    const services = [
+        {
+            title: "Treasure Mapping",
+            description: "Chart your course through the Cardano blockchain with our advanced navigation tools",
+            icon: "🗺️"
+        },
+        {
+            title: "Smart Contract Raids",
+            description: "Execute flawless smart contract interactions with our battle-tested strategies",
+            icon: "⚔️"
+        },
+        {
+            title: "Token Forging",
+            description: "Mint your own tokens with our master craftsman's tools",
+            icon: "⚒️"
+        },
+        {
+            title: "Crew Management",
+            description: "Manage your digital assets with our comprehensive portfolio tools",
+            icon: "👥"
+        }
+    ];
+
+    const stats = [
+        { value: "50K+", label: "Successful Transactions" },
+        { value: "100M", label: "ADA Managed" },
+        { value: "10K+", label: "Crew Members" },
+        { value: "95%", label: "Success Rate" }
+    ];
+
     const handleNavClick = (tab: string) => {
         setIsLoading(true);
         setSelectedTab(tab);
@@ -56,71 +86,73 @@ export default function Home() {
 
                 {/* Main Content */}
                 <main className="flex-1 p-8 bg-gradient-to-b from-black to-red-900/50 overflow-auto">
-                    <div className="max-w-4xl mx-auto">
-                        <h2 className="text-5xl font-['Pirata_One'] mb-8 text-red-500 float-animation">
-                            Welcome Aboard, Sailor!
-                        </h2>
-
-                        <div className="grid gap-8">
-                            <div className="treasure-card">
-                                <h3 className="text-2xl font-['Cinzel_Decorative'] font-bold mb-4 text-red-400">
-                                    Captains Latest Orders
-                                </h3>
-                                <p className="text-gray-300 font-serif leading-relaxed">
-                                    Ahoy crew! Our mission be to navigate the treacherous waters of the Cardano blockchain.
-                                    Weve spotted rich opportunities on the horizon, and our coffers be ready for the taking!
+                    {/* Hero Section */}
+                    <section className="max-w-6xl mx-auto mb-20">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h2 className="text-6xl font-['Pirata_One'] mb-6 text-red-500 float-animation">
+                                    Navigate the Blockchain Seas
+                                </h2>
+                                <p className="text-xl text-gray-300 mb-8">
+                                    Set sail on your blockchain journey with the most fearsome crew in the Cardano waters.
                                 </p>
+                                <button className="px-8 py-3 bg-red-700 hover:bg-red-600 transition-colors rounded-lg text-white font-bold">
+                                    Join the Crew
+                                </button>
                             </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div className="treasure-card">
-                                    <h3 className="text-xl font-['Cinzel_Decorative'] font-bold mb-3 text-red-400">
-                                        Ships Stats
-                                    </h3>
-                                    <ul className="space-y-4 text-gray-300">
-                                        <li className="flex justify-between items-center">
-                                            <span>🏴‍☠️ Crew Members:</span>
-                                            <span className="stats-value">1,234</span>
-                                        </li>
-                                        <li className="flex justify-between items-center">
-                                            <span>💰 Treasury:</span>
-                                            <span className="stats-value">50,000 ADA</span>
-                                        </li>
-                                        <li className="flex justify-between items-center">
-                                            <span>⚔️ Successful Raids:</span>
-                                            <span className="stats-value">89</span>
-                                        </li>
-                                        <li className="flex justify-between items-center">
-                                            <span>🗺️ Territories:</span>
-                                            <span className="stats-value">5</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className="treasure-card">
-                                    <h3 className="text-xl font-['Cinzel_Decorative'] font-bold mb-3 text-red-400">
-                                        Upcoming Voyages
-                                    </h3>
-                                    <ul className="space-y-4 text-gray-300">
-                                        {[
-                                            { icon: "🎯", text: "NFT Treasure Hunt", date: "Next Full Moon" },
-                                            { icon: "⚓", text: "DeFi Port Exploration", date: "Two Days Hence" },
-                                            { icon: "🔧", text: "Smart Contract Upgrade", date: "When Stars Align" },
-                                            { icon: "💎", text: "Gem Token Launch", date: "As Tide Rises" }
-                                        ].map((voyage, index) => (
-                                            <li key={index} className="flex items-center justify-between">
-                                                <span>
-                                                    <span className="mr-2">{voyage.icon}</span>
-                                                    {voyage.text}
-                                                </span>
-                                                <span className="text-red-400 text-sm italic">{voyage.date}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                            <div className="treasure-card p-8">
+                                <div className="stats-grid grid grid-cols-2 gap-8">
+                                    {stats.map((stat, index) => (
+                                        <div key={index} className="text-center">
+                                            <div className="text-3xl font-['Cinzel_Decorative'] text-red-400 mb-2">
+                                                {stat.value}
+                                            </div>
+                                            <div className="text-sm text-gray-300">{stat.label}</div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
+
+                    {/* Services Section */}
+                    <section className="max-w-6xl mx-auto mb-20">
+                        <h3 className="text-4xl font-['Cinzel_Decorative'] text-red-400 mb-12 text-center">
+                            Our Services
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {services.map((service, index) => (
+                                <div key={index} className="treasure-card group cursor-pointer">
+                                    <div className="text-4xl mb-4">{service.icon}</div>
+                                    <h4 className="text-xl font-['Cinzel_Decorative'] text-red-400 mb-3">
+                                        {service.title}
+                                    </h4>
+                                    <p className="text-gray-300">
+                                        {service.description}
+                                    </p>
+                                    <div className="mt-4 flex items-center text-red-400 group-hover:text-red-300">
+                                        <span>Learn more</span>
+                                        <span className="ml-2">→</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* CTA Section */}
+                    <section className="max-w-6xl mx-auto">
+                        <div className="treasure-card text-center py-16">
+                            <h3 className="text-4xl font-['Pirata_One'] text-red-500 mb-6">
+                                Ready to Set Sail?
+                            </h3>
+                            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                                Join our crew of blockchain buccaneers and start your journey through the Cardano seas.
+                            </p>
+                            <button className="px-8 py-3 bg-red-700 hover:bg-red-600 transition-colors rounded-lg text-white font-bold">
+                                Connect Wallet
+                            </button>
+                        </div>
+                    </section>
                 </main>
 
                 {/* Footer */}

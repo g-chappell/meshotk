@@ -34,6 +34,18 @@
     .compass-loader {
         @apply w-6 h-6 border-2 border-red-800 border-t-red-400 rounded-full animate-spin;
     }
+
+    .stats-grid {
+        @apply relative;
+    }
+
+        .stats-grid::before {
+            @apply content-[''] absolute top-1/2 left-1/2 w-px h-full bg-red-800 transform -translate-x-1/2 -translate-y-1/2;
+        }
+
+        .stats-grid::after {
+            @apply content-[''] absolute top-1/2 left-0 w-full h-px bg-red-800;
+        }
 }
 
 @keyframes float {
